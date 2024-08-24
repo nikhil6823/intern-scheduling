@@ -1,0 +1,38 @@
+.intern-leave{
+    background-color: rgb(211, 243, 232);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    background-color: white;
+    height: 60%;
+    width: 50vw;
+    padding: 50px;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
+.date-container{
+    width: 20vw;
+    justify-content:space-around;
+    margin-top: 20px;
+}
+.apply-button{
+    border: 0px;
+    background-color: green;
+    color:white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    cursor: pointer;
+}

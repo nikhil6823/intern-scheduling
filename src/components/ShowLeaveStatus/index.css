@@ -1,0 +1,28 @@
+.leave-status{
+    height: 90vh;
+    width: 70vw;
+    display: flex;
+   flex-direction: column;
+
+}
+.list-of-leaves{
+    width: 69%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    align-items: center;
+    justify-content: flex-start;
+}
+.each-leave{
+    background-color:lightblue;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 4px 0px 5px lightblue;
+    font-family: 'Times New Roman', Times, serif;
+}

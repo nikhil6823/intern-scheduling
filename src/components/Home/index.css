@@ -1,0 +1,67 @@
+.HomePageContainer{
+    background-image: url("https://i.postimg.cc/d1cQ0X8H/etactics-inc-qg4bs-Lrwhl0-unsplash.jpg");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.NavContainer{
+    
+    display: flex;
+    width:300px;
+    justify-content: space-around;
+    align-self: center;
+    margin-right: 10px;
+    font-size: 26px;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida', sans-serif;
+
+    list-style: none;
+    position: absolute; /* Position the button relative to the text container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center the button */
+    padding: 20px 20px; /* Button padding */
+    background-color: #cbdcf2b3; /* Button background color */
+    border-width: 4px ; /* Remove border */
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 50px 50px 50px 50px;
+    
+}
+.HomePageData {
+    color: rgb(2, 78, 133);
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Center text within the div */
+    margin-top: -275px;
+    position: relative; /* Position the button relative to the text container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center the button */
+    padding: 20px 20px; /* Button padding */
+    background-color: #cbdcf2b3; /* Button background color */
+    border-width: 4px ; /* Remove border */
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.homeNavItem{
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida', sans-serif;
+
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(0, 75, 102);
+    text-decoration: none;
+    
+}
+.homeNavItem:hover{
+    color: rgb(255, 74, 74);
+}

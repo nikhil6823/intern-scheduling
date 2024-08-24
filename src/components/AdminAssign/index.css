@@ -1,0 +1,62 @@
+.adminHome{
+
+    background-image: url("https://media.istockphoto.com/id/1383880970/photo/business-medical-team-strategy-planning.jpg?s=612x612&w=0&k=20&c=Apx5VBEC5JI9lhxTUcDGkcBmit7KWYbTbisbP_KqY9k=");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+.adminHomeContainer{
+    background-color: whitesmoke;
+    height: 40%;
+    width: 50%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.adminPortalHeading{
+    color: coral;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+    align-self: center;
+}
+
+select{
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border:1px solid lightslategray;
+    padding-left: 10px;
+}
+.selectCom{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-left: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.submitButton{
+    align-self: center;
+    margin-top: 50px;
+    background-color: blueviolet;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 15px;
+    width: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+
+}

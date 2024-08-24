@@ -1,0 +1,42 @@
+.schedule-table-container {
+  margin-top: 20px;
+  margin-left: 10%;
+}
+
+.schedule-table {
+  width: 50%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.schedule-table th {
+  background-color: #f5f5f5;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+#search-input {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: #007bff; /* Change border color when input is focused */
+}
