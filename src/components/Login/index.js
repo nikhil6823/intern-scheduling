@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 const Login = () => {
@@ -22,67 +22,65 @@ const Login = () => {
       password: password,
     };
 
-    console.log(details)
+    console.log(details);
 
-    const url = "http://localhost:3000/login";
+    const url = "https://intern-scheduling-b.vercel.app/login";
     const options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "cors",
-        body: JSON.stringify(details),
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
+      body: JSON.stringify(details),
     };
 
     const response = await fetch(url, options);
     const data = await response.json();
-    if(data.status === "ok"){
-        localStorage.setItem('token', data.token);
-        localStorage.setItem("user",username)
-        alert("Login Success")
-        navigate('/intern-profile');
-    }
-    else{
-      alert("Failed to login")
+    if (data.status === "ok") {
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", username);
+      alert("Login Success");
+      navigate("/intern-profile");
+    } else {
+      alert("Failed to login");
     }
   };
 
   return (
     <div className="login">
-         <div className="whole">
-      <div className="container">
-        <div className="title">Login Form</div>
-        <form>
-          <div className="row">
-            <input
-              type="text"
-              placeholder="Username"
-              onChange={onChangeUsername}
-              required
-            />
-          </div>
-          <div className="row">
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={onChangePassword}
-              required
-            />
-          </div>
-          <div className="pass">
-            <a href="/">Forgot Password?</a>
-          </div>
-          <div className="row bottom">
-            <input type="button" value="Login" onClick={login} />
-          </div>
-          <div className="signup-link">
-            Not a member? <a href="registration">Signup Now</a>
-          </div>
-        </form>
+      <div className="whole">
+        <div className="container">
+          <div className="title">Login Form</div>
+          <form>
+            <div className="row">
+              <input
+                type="text"
+                placeholder="Username"
+                onChange={onChangeUsername}
+                required
+              />
+            </div>
+            <div className="row">
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={onChangePassword}
+                required
+              />
+            </div>
+            <div className="pass">
+              <a href="/">Forgot Password?</a>
+            </div>
+            <div className="row bottom">
+              <input type="button" value="Login" onClick={login} />
+            </div>
+            <div className="signup-link">
+              Not a member? <a href="registration">Signup Now</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    </div>
-   
   );
 };
 

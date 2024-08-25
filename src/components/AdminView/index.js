@@ -1,31 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import './index.css'; // Import your CSS file for styling
-import LeftNav from '../Navbar';
+import React, { useState, useEffect } from "react";
+import "./index.css"; // Import your CSS file for styling
+import LeftNav from "../Navbar";
 
 const AdminView = () => {
   const [schedules, setSchedules] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const options = [{ link: "admin-home", value: "Home" }, { link: "admin-view", value: "View" },{link:"show-department",value:"Show Departments"},{ link: "update-leave", value: "LeaveRequest" }, {link:"add-department",value:"Add Department"},{ link: "/", value: "Logout" }];
+  const [searchTerm, setSearchTerm] = useState("");
+  const options = [
+    { link: "admin-home", value: "Home" },
+    { link: "admin-view", value: "View" },
+    { link: "show-department", value: "Show Departments" },
+    { link: "update-leave", value: "LeaveRequest" },
+    { link: "add-department", value: "Add Department" },
+    { link: "/", value: "Logout" },
+  ];
 
   useEffect(() => {
     const fetchSchedules = async () => {
       try {
-        const response = await fetch('http://localhost:3000/schedules');
+        const response = await fetch(
+          "https://intern-scheduling-b.vercel.app/schedules"
+        );
         if (response.ok) {
           const data = await response.json();
           setSchedules(data.schedules);
         } else {
-          console.error('Failed to fetch schedules:', response.statusText);
+          console.error("Failed to fetch schedules:", response.statusText);
         }
       } catch (error) {
-        console.error('Error fetching schedules:', error.message);
+        console.error("Error fetching schedules:", error.message);
       }
     };
 
     fetchSchedules();
   }, []);
 
-  const filteredSchedules = schedules.filter(schedule => {
+  const filteredSchedules = schedules.filter((schedule) => {
     const internName = schedule.internId.username.toLowerCase();
     return internName.includes(searchTerm.toLowerCase());
   });
@@ -44,7 +53,7 @@ const AdminView = () => {
           placeholder="Search by Intern Name"
           value={searchTerm}
           onChange={handleSearch}
-          id ="search-input"
+          id="search-input"
         />
         <table className="schedule-table">
           <thead>

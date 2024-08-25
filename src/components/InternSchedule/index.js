@@ -1,14 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import './index.css';
-import LeftNav from '../Navbar';
+import React, { useState, useEffect } from "react";
+import "./index.css";
+import LeftNav from "../Navbar";
 
 const ScheduleView = ({ userId }) => {
   const [schedules, setSchedules] = useState([]);
-  const list = [{ link: "intern-profile", value: "Home" }, { link: "intern-leave", value: "Leave Status" }, { link: "intern-view", value: "Schedules" }, { link: "apply-leave", value: "Apply Leave" }, { link: "apply-request", value: "Leave Request" }, { link: "/", value: "Logout" }]
+  const list = [
+    { link: "intern-profile", value: "Home" },
+    { link: "intern-leave", value: "Leave Status" },
+    { link: "intern-view", value: "Schedules" },
+    { link: "apply-leave", value: "Apply Leave" },
+    { link: "apply-request", value: "Leave Request" },
+    { link: "/", value: "Logout" },
+  ];
   useEffect(() => {
     const fetchUserSchedules = async () => {
       try {
-        const token = localStorage.getItem("token")
+        const token = localStorage.getItem("token");
         const options = {
           method: "GET",
           headers: {
@@ -17,16 +24,19 @@ const ScheduleView = ({ userId }) => {
           },
           mode: "cors",
         };
-        const response = await fetch(`http://localhost:3000/user/schedules`, options);
+        const response = await fetch(
+          `https://intern-scheduling-b.vercel.app/user/schedules`,
+          options
+        );
         if (response.ok) {
           const data = await response.json();
-          console.log(data)
+          console.log(data);
           setSchedules(data.schedules);
         } else {
-          console.error('Failed to fetch schedules:', response.statusText);
+          console.error("Failed to fetch schedules:", response.statusText);
         }
       } catch (error) {
-        console.error('Error fetching schedules:', error.message);
+        console.error("Error fetching schedules:", error.message);
       }
     };
 

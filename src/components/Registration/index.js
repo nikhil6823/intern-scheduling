@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 //import { useHistory } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 import "./index.css";
 
@@ -36,10 +35,10 @@ const Registration = () => {
       email,
       username,
       password,
-      phonenumber
+      phonenumber,
     };
 
-    const url = "http://localhost:3000/register";
+    const url = "https://intern-scheduling-b.vercel.app/register";
     const options = {
       method: "POST",
       headers: {
@@ -54,31 +53,74 @@ const Registration = () => {
 
     console.log(data.message);
     if (data.message === "Intern registration successful.") {
-        navigate('/login');
-
+      navigate("/login");
     }
   };
 
   return (
     <div className="body">
-    <div className="registerContainer">
-      <h1>Register</h1>
+      <div className="registerContainer">
+        <h1>Register</h1>
 
-      <label htmlFor="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter Your Name" name="name" value={username} onChange={onChangeName} required/><br/>
-      
-      <label htmlFor="number"><b>Contact No.</b></label>
-      <input type="text" placeholder="Enter Your Contact No." name="number" value={phonenumber} onChange={onChangeContact} required/><br/>
-      
-      <label htmlFor="email"><b>Email</b></label> 
-      <input type="text" placeholder="Enter Your E-mail" name="email" value={email} onChange={onChangeEmail} required/><br/>
+        <label htmlFor="name">
+          <b>Name</b>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Your Name"
+          name="name"
+          value={username}
+          onChange={onChangeName}
+          required
+        />
+        <br />
 
-      <label htmlFor="pwd"><b>Password</b></label>
-      <input type="password" placeholder="Enter Your Password" name="psw" value={password} onChange={onChangePassword} required/><br/>
+        <label htmlFor="number">
+          <b>Contact No.</b>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Your Contact No."
+          name="number"
+          value={phonenumber}
+          onChange={onChangeContact}
+          required
+        />
+        <br />
 
-      <button onClick={submit} className="registerbutton">Register</button>
-      <p>Already have an account? <a href="login">Sign in</a>.</p>
-    </div>
+        <label htmlFor="email">
+          <b>Email</b>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Your E-mail"
+          name="email"
+          value={email}
+          onChange={onChangeEmail}
+          required
+        />
+        <br />
+
+        <label htmlFor="pwd">
+          <b>Password</b>
+        </label>
+        <input
+          type="password"
+          placeholder="Enter Your Password"
+          name="psw"
+          value={password}
+          onChange={onChangePassword}
+          required
+        />
+        <br />
+
+        <button onClick={submit} className="registerbutton">
+          Register
+        </button>
+        <p>
+          Already have an account? <a href="login">Sign in</a>.
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 const AdminLogin = () => {
@@ -22,7 +22,7 @@ const AdminLogin = () => {
     //   password: password,
     // };
 
-    // const url = "http://localhost:3000/admin-login";
+    // const url = "https://intern-scheduling-b.vercel.app/admin-login";
     // const options = {
     //     method: "POST",
     //     headers: {
@@ -39,48 +39,47 @@ const AdminLogin = () => {
     //     navigate('/adminhome');
     // }
 
-    if(username === password){
-      localStorage.setItem('admin', "admin")
-      navigate("/admin-home")
+    if (username === password) {
+      localStorage.setItem("admin", "admin");
+      navigate("/admin-home");
     }
   };
 
   return (
     <div className="login">
-         <div className="whole">
-      <div className="container">
-        <div className="title">Login Form</div>
-        <form>
-          <div className="row">
-            <input
-              type="text"
-              placeholder="Username"
-              onChange={onChangeUsername}
-              required
-            />
-          </div>
-          <div className="row">
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={onChangePassword}
-              required
-            />
-          </div>
-          <div className="pass">
-            <a href="/">Forgot Password?</a>
-          </div>
-          <div className="row bottom">
-            <input type="button" value="Login" onClick={login} />
-          </div>
-          <div className="signup-link">
-            Not a member? <a href="registration">Signup Now</a>
-          </div>
-        </form>
+      <div className="whole">
+        <div className="container">
+          <div className="title">Login Form</div>
+          <form>
+            <div className="row">
+              <input
+                type="text"
+                placeholder="Username"
+                onChange={onChangeUsername}
+                required
+              />
+            </div>
+            <div className="row">
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={onChangePassword}
+                required
+              />
+            </div>
+            <div className="pass">
+              <a href="/">Forgot Password?</a>
+            </div>
+            <div className="row bottom">
+              <input type="button" value="Login" onClick={login} />
+            </div>
+            <div className="signup-link">
+              Not a member? <a href="registration">Signup Now</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    </div>
-   
   );
 };
 

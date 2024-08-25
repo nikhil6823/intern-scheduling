@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 import LeftNav from "../Navbar";
 
@@ -7,7 +7,12 @@ const AdminAssign = () => {
   const [interns, setInterns] = useState([]);
   const [intern, setIntern] = useState("default");
   const [domain, setDomain] = useState("default");
-  const options = [{link:"admin-view",value:"View"},{link:"update-leave",value:"LeaveRequest"},{link:"admin-home",value:"Assign"},{link:"/",value:"Logout"}]
+  const options = [
+    { link: "admin-view", value: "View" },
+    { link: "update-leave", value: "LeaveRequest" },
+    { link: "admin-home", value: "Assign" },
+    { link: "/", value: "Logout" },
+  ];
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,22 +21,20 @@ const AdminAssign = () => {
   }, []);
 
   const getAllInterns = async () => {
-
-
     const token = localStorage.getItem("admin");
     if (!token) {
-     navigate('/admin-login');
-    
+      navigate("/admin-login");
+
       return;
     }
 
-    const url = "http://localhost:3000/interns";
-    const response = await fetch(url,{
-      method:"GET",
-      mode:"cors",
+    const url = "https://intern-scheduling-b.vercel.app/interns";
+    const response = await fetch(url, {
+      method: "GET",
+      mode: "cors",
     });
     const data = await response.json();
-    console.log(data)
+    console.log(data);
     setInterns([...data]);
   };
 
@@ -51,7 +54,7 @@ const AdminAssign = () => {
       newDomain: domain,
     };
 
-    const url = "http://localhost:3000/interns/update";
+    const url = "https://intern-scheduling-b.vercel.app/interns/update";
     const options = {
       method: "PUT",
       headers: {
@@ -64,17 +67,19 @@ const AdminAssign = () => {
     const response = await fetch(url, options);
     const data = await response.json();
     console.log(data);
-    alert("Domain Assigned Successfully")
+    alert("Domain Assigned Successfully");
   };
 
   return (
     <div className="adminHome">
-      <LeftNav options={options}/>
+      <LeftNav options={options} />
       <div className="adminHomeContainer">
         <h1 className="adminPortalHeading">Admin Portal</h1>
         <div className="selectCom">
           <select value={intern} onChange={selectIntern}>
-          <option value="default" disable>Select an Intern</option>
+            <option value="default" disable>
+              Select an Intern
+            </option>
             {interns.map((each) => (
               <option key={each._id} value={each.username}>
                 {each.username}
@@ -82,7 +87,9 @@ const AdminAssign = () => {
             ))}
           </select>
           <select value={domain} onChange={selectDomain}>
-            <option value="default" disabled>Select an option</option>
+            <option value="default" disabled>
+              Select an option
+            </option>
             <option value="cardio">Cardio</option>
             <option value="neuro">Neuro</option>
           </select>

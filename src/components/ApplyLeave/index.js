@@ -14,7 +14,7 @@ const ApplyLeave = () => {
     const { reason, startDate, endDate, nominatedIntern } = leaveDetails; // Include nominee in the request body
     const token = localStorage.getItem("token");
     const Details = { reason, startDate, endDate, nominatedIntern }; // Include nominee in the request body
-    const url = "http://localhost:3000/intern/leave-request";
+    const url = "https://intern-scheduling-b.vercel.app/intern/leave-request";
     const options = {
       method: "POST",
       headers: {
@@ -31,7 +31,7 @@ const ApplyLeave = () => {
       console.log(data);
       alert("Leave Applied");
     } catch (error) {
-      alert("Failed To Apply")
+      alert("Failed To Apply");
       console.error("Error applying for leave:", error);
     }
   };
@@ -48,11 +48,19 @@ const ApplyLeave = () => {
     setLeaveDetails({ ...leaveDetails, endDate: e.target.value });
   };
 
-  const setNominee = (e) => { // Handle change in nominee input
+  const setNominee = (e) => {
+    // Handle change in nominee input
     setLeaveDetails({ ...leaveDetails, nominatedIntern: e.target.value });
   };
 
-  const list = [{link:"intern-profile",value:"Home"},{link:"intern-leave",value:"Leave Status"},{link:"intern-view",value:"Schedules"},{link:"apply-leave",value:"Apply Leave"},{link:"apply-request",value:"Leave Request"},{link:"/",value:"Logout"}]
+  const list = [
+    { link: "intern-profile", value: "Home" },
+    { link: "intern-leave", value: "Leave Status" },
+    { link: "intern-view", value: "Schedules" },
+    { link: "apply-leave", value: "Apply Leave" },
+    { link: "apply-request", value: "Leave Request" },
+    { link: "/", value: "Logout" },
+  ];
   const { reason, startDate, endDate, nominatedIntern } = leaveDetails;
 
   return (
@@ -74,7 +82,9 @@ const ApplyLeave = () => {
           <label>End Date</label>
           <input type="date" onChange={setEndDate} value={endDate} />
         </div>
-        <div className="date-container"> {/* Add nominee input field */}
+        <div className="date-container">
+          {" "}
+          {/* Add nominee input field */}
           <label>Nominee</label>
           <input
             type="text"
