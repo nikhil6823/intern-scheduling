@@ -19,7 +19,7 @@ const LeaveRequests = () => {
         },
         mode: "cors",
       };
-      const response = await fetch('http://localhost:3000/intern/leave-requests', options); // Assuming your API endpoint is /intern/leave-requests
+      const response = await fetch('https://intern-scheduling-backend.vercel.app/intern/leave-requests', options); // Assuming your API endpoint is /intern/leave-requests
       if (response.ok) {
         const data = await response.json();
         console.log(data);
@@ -42,7 +42,7 @@ const LeaveRequests = () => {
   const handleApprove = async (leaveRequestId) => {
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch(`http://localhost:3000/leave-requests/${leaveRequestId}/approve`, {
+      const response = await fetch(`https://intern-scheduling-backend.vercel.app/leave-requests/${leaveRequestId}/approve`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const LeaveRequests = () => {
   const handleReject = async (leaveRequestId) => {
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch(`http://localhost:3000/leave-requests/${leaveRequestId}/reject`, {
+      const response = await fetch(`https://intern-scheduling-backend.vercel.app/leave-requests/${leaveRequestId}/reject`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -22,7 +22,7 @@ const AdminLogin = () => {
     //   password: password,
     // };
 
-    // const url = "http://localhost:3000/admin-login";
+    // const url = "https://intern-scheduling-backend.vercel.app/admin-login";
     // const options = {
     //     method: "POST",
     //     headers: {

@@ -14,7 +14,7 @@ class ShowLeaveStatus extends Component{
     fetchLeaveStatus = async() =>{
         const token = localStorage.getItem("token");
     
-        const url = "http://localhost:3000/user/leaves";
+        const url = "https://intern-scheduling-backend.vercel.app/user/leaves";
         const options = {
           method: "GET",
           headers: {

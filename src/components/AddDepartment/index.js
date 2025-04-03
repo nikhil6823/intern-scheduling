@@ -25,7 +25,7 @@ class AddDepartments extends React.Component {
     const { departmentName, departments,week } = this.state;
     if (departmentName.trim() !== '') {
       try {
-        const response = await fetch('http://localhost:3000/departments', {
+        const response = await fetch('https://intern-scheduling-backend.vercel.app/departments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

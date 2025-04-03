@@ -10,7 +10,7 @@ const AdminView = () => {
   useEffect(() => {
     const fetchSchedules = async () => {
       try {
-        const response = await fetch('http://localhost:3000/schedules');
+        const response = await fetch('https://intern-scheduling-backend.vercel.app/schedules');
         if (response.ok) {
           const data = await response.json();
           setSchedules(data.schedules);

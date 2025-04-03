@@ -24,7 +24,7 @@ const Login = () => {
 
     console.log(details);  // ✅ Debugging
 
-    const url = "http://localhost:3000/login";
+    const url = "https://intern-scheduling-backend.vercel.app/login";
     const options = {
         method: "POST",
         headers: {

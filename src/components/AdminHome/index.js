@@ -15,7 +15,7 @@ const AdminDashboard = () => {
           },
           mode: "cors",
         };
-        const response = await fetch('http://localhost:3000/assign-departments', options); // Assuming your API endpoint is /intern/leave-requests
+        const response = await fetch('https://intern-scheduling-backend.vercel.app/assign-departments', options); // Assuming your API endpoint is /intern/leave-requests
         if (response.ok) {
           alert("Duties Scheduled Successfully")
           alert("ok")
@@ -37,7 +37,7 @@ const AdminDashboard = () => {
             },
             mode: "cors",
           };
-        const internsResponse = await fetch('http://localhost:3000/interns',options);
+        const internsResponse = await fetch('https://intern-scheduling-backend.vercel.app/interns',options);
         //const data = await internsResponse.json()
         if (internsResponse.ok) {
           const internsData = await internsResponse.json();
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
         }
 
         // Fetch departments
-        const departmentsResponse = await fetch('http://localhost:3000/get-departments',options);
+        const departmentsResponse = await fetch('https://intern-scheduling-backend.vercel.app/get-departments',options);
         if (departmentsResponse.ok) {
           const departmentsData = await departmentsResponse.json();
           setDepartments(departmentsData.departments);

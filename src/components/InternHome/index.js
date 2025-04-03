@@ -26,7 +26,7 @@ const InternProfile = () => {
       return;
     }
 
-    const url = "http://localhost:3000/intern-details";
+    const url = "https://intern-scheduling-backend.vercel.app/intern-details";
     const options = {
       method: "GET",
       headers: {

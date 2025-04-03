@@ -39,7 +39,7 @@ const Registration = () => {
       phonenumber
     };
 
-    const url = "http://localhost:3000/register";
+    const url = "https://intern-scheduling-backend.vercel.app/register";
     const options = {
       method: "POST",
       headers: {

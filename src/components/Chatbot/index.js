@@ -18,7 +18,7 @@ const Chatbot = () => {
         setLoading(true);
 
         try {
-            const res = await axios.post("http://localhost:3000/chatbot", { message });
+            const res = await axios.post("https://intern-scheduling-backend.vercel.app/chatbot", { message });
 
             setMessages([...newMessages, { sender: "bot", text: res.data.reply }]);
         } catch (error) {

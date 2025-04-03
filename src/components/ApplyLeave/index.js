@@ -14,7 +14,7 @@ const ApplyLeave = () => {
     const { reason, startDate, endDate, nominatedIntern } = leaveDetails; // Include nominee in the request body
     const token = localStorage.getItem("token");
     const Details = { reason, startDate, endDate, nominatedIntern }; // Include nominee in the request body
-    const url = "http://localhost:3000/intern/leave-request";
+    const url = "https://intern-scheduling-backend.vercel.app/intern/leave-request";
     const options = {
       method: "POST",
       headers: {

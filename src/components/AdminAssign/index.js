@@ -25,7 +25,7 @@ const AdminAssign = () => {
       return;
     }
 
-    const url = "http://localhost:3000/interns";
+    const url = "https://intern-scheduling-backend.vercel.app/interns";
     const response = await fetch(url,{
       method:"GET",
       mode:"cors",
@@ -51,7 +51,7 @@ const AdminAssign = () => {
       newDomain: domain,
     };
 
-    const url = "http://localhost:3000/interns/update";
+    const url = "https://intern-scheduling-backend.vercel.app/interns/update";
     const options = {
       method: "PUT",
       headers: {

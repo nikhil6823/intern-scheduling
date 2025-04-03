@@ -17,7 +17,7 @@ const ShowDepartments = () => {
             },
             mode: "cors",
           };
-        const response = await fetch('http://localhost:3000/get-departments',options);
+        const response = await fetch('https://intern-scheduling-backend.vercel.app/get-departments',options);
       
         if (response.ok) {
           const data = await response.json();
