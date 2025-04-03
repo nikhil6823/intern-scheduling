@@ -13,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
-    "eslint": "^9.23.0",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
     "react-dom": "^18.2.0",
@@ -53,6 +52,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
     "react-scripts": "^5.0.1"
   },
