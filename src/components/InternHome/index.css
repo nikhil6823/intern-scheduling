@@ -1,0 +1,81 @@
+/* Main Container */
+.internHome {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9; /* Clean White Background */
+}
+
+/* Profile Card */
+.internDetails {
+    background: white;
+    height: 60%;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Soft Shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.internDetails:hover {
+    transform: scale(1.02); /* Subtle hover effect */
+}
+
+/* Header */
+.InternDetailsHeading {
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff; /* Accent Color */
+    padding-bottom: 5px;
+}
+
+/* User Details */
+.userDetailsBox {
+    width: 90%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    background: rgba(240, 240, 240, 0.5); /* Light Grey Box */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 12px;
+}
+
+.userDetailsBox:hover {
+    transform: scale(1.03);
+    background: rgba(240, 240, 240, 0.8);
+}
+
+/* Text Styling */
+.userDetailsBox h3 {
+    color: #444;
+    font-weight: 500;
+    font-size: larger;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .internDetails {
+        width: 80%;
+    }
+    
+    .InternDetailsHeading {
+        font-size: 1.8rem;
+    }
+
+    .userDetailsBox {
+        font-size: 16px;
+    }
+}

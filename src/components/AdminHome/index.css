@@ -1,0 +1,72 @@
+.admin-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .dashboard-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  .dashboard-card:hover{
+    background-color: lightblue;
+  }
+  .table-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .interns-table,
+  .departments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .interns-table th,
+  .interns-table td,
+  .departments-table th,
+  .departments-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .interns-table th,
+  .departments-table th {
+    background-color: #f5f5f5;
+  }
+  
+  .interns-table tbody tr:nth-child(even),
+  .departments-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .interns-table tbody tr:hover,
+  .departments-table tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  .schedule-duty{
+    background-color: green;
+    border: 0px;
+    padding: 9px;
+    color: white;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    cursor: pointer;
+}

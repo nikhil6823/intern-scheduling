@@ -1,0 +1,47 @@
+
+
+.leave-requests-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin-left: 15%;
+  }
+
+  .intern-leave-container {
+    margin-bottom: 10px;
+    width: 70%;
+    overflow: auto;
+  }
+  
+  .leave-item {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .pending {
+    color: #f39c12;
+  }
+  
+  .approved {
+    color: #2ecc71;
+  }
+  
+  .rejected {
+    color: #e74c3c;
+  }
+  
+  .approve-btn,
+  .reject-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: aquamarine;
+    padding: 10px;
+    border:0px;
+    cursor:pointer
+  }
+  

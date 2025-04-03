@@ -1,0 +1,39 @@
+
+
+.leave-requests-container {
+  margin: 20px;
+  margin-left: 15%;
+}
+
+.leave-requests-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.leave-requests-list {
+  list-style: none;
+  padding: 0;
+}
+
+.leave-request-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.approve-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.reject-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

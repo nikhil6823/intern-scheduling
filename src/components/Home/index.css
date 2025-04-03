@@ -1,0 +1,42 @@
+.HomePageContainer{
+    background-image: url("https://st4.depositphotos.com/9999814/22690/i/450/depositphotos_226904298-stock-photo-male-doctor-using-mobile-phone.jpg");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+
+.NavContainer{
+    color: brown;
+    display: flex;
+    width:300px;
+    justify-content: space-around;
+    align-self: flex-end;
+    margin-right: 100px;
+    font-size: 26px;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+}
+.HomePageData{
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    align-self: flex-end;
+    margin-right: 100px;
+    margin-top: 200px;
+
+}
+.homeNavItem{
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: brown;
+    text-decoration: none;
+}
+.homeNavItem:hover{
+    color: red;
+}

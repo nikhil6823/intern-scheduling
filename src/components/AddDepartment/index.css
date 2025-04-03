@@ -1,0 +1,49 @@
+.admin-departments-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20%;
+  }
+  
+  .admin-departments-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .admin-departments-container form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .admin-departments-container form button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .admin-departments-container form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .department-list {
+    margin-top: 20px;
+  }
+  
+  .department-list h3 {
+    margin-bottom: 10px;
+  }
+  
+  .department-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .department-list ul li {
+    margin-bottom: 5px;
+  }
+  

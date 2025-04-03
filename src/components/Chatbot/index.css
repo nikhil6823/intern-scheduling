@@ -1,0 +1,48 @@
+/* Ensure chatbot text is properly wrapped inside */
+.bot-markdown {
+    text-align: left;
+    padding: 10px;
+    font-size: 15px;
+    color: #333;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+/* Headers */
+.bot-markdown h1, 
+.bot-markdown h2, 
+.bot-markdown h3 {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* ✅ Forces ordered & unordered lists to stay inside */
+.bot-markdown ol, 
+.bot-markdown ul {
+    padding-left: 10px !important; /* Reduces left padding */
+    margin-left: 10px !important; /* Ensures they stay inside */
+    list-style-position: inside !important; /* Forces numbers and bullets inside */
+    width: 100% !important; /* Ensures list stays within the chatbot */
+}
+
+/* ✅ Ensures list items do not break out */
+.bot-markdown li {
+    padding-left: 5px !important; /* Slight indent for better readability */
+    margin-left: 0px !important; /* Forces text inside */
+    word-wrap: break-word; /* Wraps long text properly */
+    white-space: normal !important; /* Prevents overflow */
+    overflow-wrap: break-word; /* Wraps long words correctly */
+    display: list-item; /* Ensures correct rendering */
+    max-width: 100% !important; /* Ensures no overflow */
+}
+
+/* ✅ Fix for blockquotes */
+.bot-markdown blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+    margin: 10px 0;
+    color: #555;
+    font-style: italic;
+}
+
