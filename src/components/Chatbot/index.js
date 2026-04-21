@@ -106,56 +106,81 @@ const Chatbot = () => {
 
 // ===== Styles =====
 const chatContainerStyle = {
-  position: "fixed",
-  bottom: "20px",
-  right: "20px",
-  width: "400px",
-  backgroundColor: "#fff",
-  border: "1px solid #ccc",
-  padding: "15px",
-  borderRadius: "10px",
-  zIndex: "1000",
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    width: "500px",
+    backgroundColor: "#fff",
+    border: "1px solid #ccc",
+    padding: "15px",
+    borderRadius: "10px",
+    zIndex: "1000",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
 };
 
 const chatBoxStyle = {
-  maxHeight: "300px",
-  overflowY: "auto",
-  marginBottom: "10px",
+    minHeight: "300px",
+    maxHeight: "400px",
+    overflowY: "auto",
+    padding: "10px",
+    backgroundColor: "#f7f7f7",
+    borderRadius: "5px",
+    marginBottom: "10px",
+    fontSize: "14px",
+    color: "#333",
 };
 
 const userMessageStyle = {
-  textAlign: "right",
-  backgroundColor: "#007bff",
-  color: "#fff",
-  padding: "8px",
-  margin: "5px",
-  borderRadius: "5px",
+    backgroundColor: "#007bff",
+    color: "#fff",
+    padding: "8px",
+    borderRadius: "5px",
+    marginBottom: "5px",
+    textAlign: "right",
 };
 
-const botMessageStyle = {
-  textAlign: "left",
-  backgroundColor: "#eee",
-  padding: "8px",
-  margin: "5px",
-  borderRadius: "5px",
+const botMessageStyle = { 
+    backgroundColor: "#e0e0e0", 
+    padding: "30px", 
+    borderRadius: "5px", 
+    textAlign: "left", 
+    whiteSpace: "pre-wrap",  // Ensures proper text wrapping
+    fontSize: "14px",
+    display: "block",
+    wordWrap: "break-word", // Prevents long words from overflowing
+    marginBottom: "5px",
+    lineHeight: "1.5" // Improves readability
 };
 
 const toggleButtonStyle = {
-  position: "fixed",
-  bottom: "20px",
-  right: "20px",
-  padding: "10px",
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    backgroundColor: "#007bff",
+    color: "#fff",
+    padding: "10px 15px",
+    borderRadius: "50px",
+    border: "none",
+    cursor: "pointer",
+    zIndex: "1001",
+    fontSize: "16px",
 };
 
 const inputStyle = {
-  width: "100%",
-  padding: "8px",
+    width: "100%",
+    padding: "8px",
+    marginBottom: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
 };
 
 const buttonStyle = {
-  marginTop: "5px",
-  width: "100%",
-  padding: "8px",
+    backgroundColor: "#007bff",
+    color: "#fff",
+    padding: "8px 12px",
+    borderRadius: "5px",
+    border: "none",
+    cursor: "pointer",
 };
 
 export default Chatbot;
